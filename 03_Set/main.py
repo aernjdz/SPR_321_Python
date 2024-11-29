@@ -22,3 +22,6 @@ print(f"Common cities: {' '.join(cities1 & cities2)}")
 print(f"Unique to cities1: {' '.join(cities1 - cities2)}")
 print(f"Unique to cities2: {' '.join(cities2 - cities1)}")
 print(f"Unique cities from both sets: {' '.join(cities1 ^ cities2)}")
+
+
+

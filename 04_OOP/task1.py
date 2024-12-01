@@ -1,5 +1,10 @@
-from math import pi
+import os
 import json
+from math import pi
+
+
+save_folder = "04_OOP"
+os.makedirs(save_folder, exist_ok=True)
 
 class Figure:
     def area(self):
@@ -135,17 +140,16 @@ shapes = [
     Ellipse(0, 0, 8, 4)
 ]
 
-
 for i, shape in enumerate(shapes):
-    filename = f"shape_{i}.json"
+    filename = os.path.join(save_folder, f"shape_{i}.json")
     shape.save(filename)
 
+# Load shapes from the folder
 loaded_shapes = []
 for i in range(len(shapes)):
-    filename = f"shape_{i}.json"
+    filename = os.path.join(save_folder, f"shape_{i}.json")
     loaded_shapes.append(Shape.load(filename))
 
+# Display loaded shapes
 for shape in loaded_shapes:
     shape.show()
-
-

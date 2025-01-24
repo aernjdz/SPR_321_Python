@@ -4,19 +4,16 @@ class Temperature:
 
     @staticmethod
     def celsius_to_fahrenheit(celsius):
-        """Convert Celsius to Fahrenheit."""
         Temperature._conversion_count += 1
         return (celsius * 9/5) + 32
 
     @staticmethod
     def fahrenheit_to_celsius(fahrenheit):
-        """Convert Fahrenheit to Celsius."""
         Temperature._conversion_count += 1
         return (fahrenheit - 32) * 5/9
 
     @staticmethod
     def get_conversion_count():
-        """Return the total number of conversions."""
         return Temperature._conversion_count
 
 
